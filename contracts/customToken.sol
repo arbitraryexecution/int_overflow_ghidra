@@ -23,7 +23,7 @@ contract MyToken {
     function symbol() public view returns (string memory) {
         return _symbol;
     }
-    function decimals() public view returns (uint8) {
+    function decimals() public pure returns (uint8) {
         return 18;
     }
     function totalSupply() public view returns (uint256) {
