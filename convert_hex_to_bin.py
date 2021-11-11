@@ -13,6 +13,9 @@ if not os.path.isfile(input_fpath):
 with open(input_fpath, 'r') as f:
     data = f.read()
 
+if data[:2] == '0x':
+    data = data[2:]
+
 data_bytes = binascii.a2b_hex(data.strip('\n'))
 
 with open(sys.argv[2], 'wb') as f:
